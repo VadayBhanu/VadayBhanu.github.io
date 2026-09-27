@@ -47,7 +47,7 @@
 
 /* ---------- Reset & base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: clip; }
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -138,6 +138,7 @@ ul, ol { list-style: none; }
   display: grid; grid-template-columns: 1.12fr 0.88fr;
   gap: 4rem; align-items: center; padding-bottom: 4.5rem;
 }
+.hero-inner > * { min-width: 0; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-size: 0.84rem; font-weight: 600; color: var(--accent);
@@ -151,8 +152,8 @@ ul, ol { list-style: none; }
   100% { box-shadow: 0 0 0 0 rgba(61, 220, 132, 0); }
 }
 .hero-hello { font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent); margin-bottom: 0.6rem; }
-.hero-name { font-size: clamp(2.6rem, 5.4vw, 4.1rem); font-weight: 800; margin-bottom: 0.4rem; }
-.hero-role { font-size: clamp(1.5rem, 3vw, 2.15rem); font-weight: 700; color: var(--muted); margin-bottom: 1.4rem; }
+.hero-name { font-size: clamp(2.3rem, 5.4vw, 4.1rem); font-weight: 800; margin-bottom: 0.4rem; }
+.hero-role { font-size: clamp(1.35rem, 3vw, 2.15rem); font-weight: 700; color: var(--muted); margin-bottom: 1.4rem; }
 .accent-text { color: var(--accent); }
 .hero-sub { color: var(--muted); font-size: 1.06rem; max-width: 34rem; margin-bottom: 2.1rem; }
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.8rem; }
@@ -186,7 +187,7 @@ ul, ol { list-style: none; }
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.72rem; line-height: 1.55; color: #e6edf3;
   transform: rotate(-3deg); transition: transform 0.35s ease;
-  max-width: 230px;
+  max-width: min(240px, 72vw);
 }
 .portrait-card:hover .code-card { transform: rotate(0deg) translateY(-4px); }
 .code-card-bar { display: flex; gap: 6px; margin-bottom: 0.55rem; }
@@ -194,13 +195,13 @@ ul, ol { list-style: none; }
 .code-card-bar span:nth-child(1) { background: #ff5f57; }
 .code-card-bar span:nth-child(2) { background: #febc2e; }
 .code-card-bar span:nth-child(3) { background: #28c840; }
-.code-card pre { margin: 0; }
+.code-card pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
 .code-card code { font-family: inherit; background: none; padding: 0; color: inherit; }
 .tok-kw { color: #ff7b72; }
 .tok-var { color: #79c0ff; }
 .tok-str { color: #a5d6ff; }
 @media (max-width: 720px) {
-  .code-card { left: -0.9rem; bottom: 3.6rem; font-size: 0.64rem; max-width: 196px; }
+  .code-card { left: -0.9rem; bottom: 3.6rem; font-size: 0.64rem; max-width: min(200px, 62vw); }
 }
 
 /* ticker */
@@ -375,23 +376,29 @@ a.mini-card:hover { transform: translateY(-3px); border-color: rgba(255, 138, 42
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 3.2rem; }
-  .portrait-card { width: min(230px, 58vw); }
+  .hero-inner { grid-template-columns: 1fr; gap: 2.6rem; padding-bottom: 3.2rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
   .projects { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .mini-grid { grid-template-columns: 1fr; }
   .t-item { grid-template-columns: 1fr; gap: 0.5rem; }
 }
+@media (max-width: 768px) {
+  .hero { padding-top: 6.5rem; }
+  .hero-sub { font-size: 1rem; margin-bottom: 1.8rem; }
+  .hero-ctas { margin-bottom: 2rem; }
+  .hero-ctas .btn { flex: 1 1 100%; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 1.4rem; }
+  .portrait-card { width: min(320px, 80vw); }
+  .edu-meta { flex-wrap: wrap; gap: 1.2rem; }
+  .section { padding: 5rem 0; }
+}
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .menu-btn { display: flex; }
   .nav-actions .btn-small { display: none; }
-  .hero { padding-top: 8rem; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
-  .hero-ctas .btn { flex: 1 1 auto; }
+  .eyebrow { font-size: 0.78rem; padding: 0.4rem 0.9rem; }
   .skills-grid { grid-template-columns: 1fr; }
-  .section { padding: 4.5rem 0; }
   .about-facts li { grid-template-columns: 1fr; gap: 0.2rem; }
   .contact-ctas .btn { width: 100%; }
   .footer-inner { flex-direction: column; text-align: center; }
