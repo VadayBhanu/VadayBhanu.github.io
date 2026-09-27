@@ -200,7 +200,7 @@ ul, ol { list-style: none; }
 .tok-var { color: #79c0ff; }
 .tok-str { color: #a5d6ff; }
 @media (max-width: 720px) {
-  .code-card { left: -1.1rem; bottom: 2.1rem; font-size: 0.64rem; max-width: 196px; }
+  .code-card { left: -0.9rem; bottom: 3.6rem; font-size: 0.64rem; max-width: 196px; }
 }
 
 /* ticker */
@@ -376,8 +376,7 @@ a.mini-card:hover { transform: translateY(-3px); border-color: rgba(255, 138, 42
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; gap: 3.2rem; }
-  .hero-visual { order: -1; }
-  .portrait-card { width: min(250px, 62vw); }
+  .portrait-card { width: min(230px, 58vw); }
   .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
   .projects { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
