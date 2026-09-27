@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
   <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
@@ -41,7 +41,7 @@
 
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="logo" aria-label="Back to top">bhanu<span class="logo-dot">.</span>dev</a>
+      <a href="#top" class="logo" aria-label="Back to top">Bhanu<span class="logo-dot">.</span>dev</a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -73,7 +73,8 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span> Available for Summer 2027 SWE internships</p>
+          <p class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span> Open to Summer 2027 SWE internships</p>
+          <p class="hero-hello-mobile reveal">Hi, I'm Bhanu Pratap Yadav —</p>
           <p class="hero-hello reveal">Hi, my name is</p>
           <h1 class="hero-name reveal">Bhanu Pratap Yadav.</h1>
           <h2 class="hero-role reveal">I build <span class="accent-text">web products</span> people actually use.</h2>
@@ -93,15 +94,18 @@
         </div>
         <div class="hero-visual reveal">
           <figure class="portrait-card">
-            <img src="images/profile.jpg?v=9" alt="Portrait of Bhanu Pratap Yadav" width="1080" height="1080" fetchpriority="high">
+            <picture>
+              <source media="(max-width: 960px)" srcset="images/profile-outdoor.jpg">
+              <img src="images/profile.jpg?v=10" alt="Portrait of Bhanu Pratap Yadav" width="1080" height="1080" fetchpriority="high">
+            </picture>
             <figcaption><span class="loc-dot" aria-hidden="true"></span> Arlington, TX</figcaption>
             <div class="code-card" aria-hidden="true">
               <div class="code-card-bar"><span></span><span></span><span></span></div>
-              <pre><code><span class="tok-kw">const</span> <span class="tok-var">bhanu</span> = {
-  role: <span class="tok-str">"Full-Stack Developer"</span>,
-  stack: [<span class="tok-str">"React"</span>, <span class="tok-str">"Next.js"</span>],
-  coffee: <span class="tok-kw">true</span>,
-  hireable: <span class="tok-kw">true</span>
+              <pre><code><span class="c-k">const</span> <span class="c-v">bhanu</span> = {
+  role: <span class="c-s">'fullstack_dev'</span>,
+  school: <span class="c-s">'UTA Honors'</span>,
+  ships: <span class="c-s">'real products'</span>,
+  openToWork: <span class="c-b">true</span>
 };</code></pre>
             </div>
           </figure>
@@ -322,6 +326,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=9" defer></script>
+  <script src="script.js?v=10" defer></script>
 </body>
 </html>
