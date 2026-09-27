@@ -235,6 +235,7 @@ ul, ol { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .ticker-track { animation: none; }
+  .pulse { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -389,7 +390,7 @@ a.mini-card:hover { transform: translateY(-3px); border-color: rgba(255, 138, 42
   .hero-ctas { margin-bottom: 2rem; }
   .hero-ctas .btn { flex: 1 1 100%; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 1.4rem; }
-  .portrait-card { width: min(320px, 80vw); }
+  .portrait-card { width: min(320px, 92%); }
   .edu-meta { flex-wrap: wrap; gap: 1.2rem; }
   .section { padding: 5rem 0; }
 }
