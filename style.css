@@ -176,6 +176,33 @@ ul, ol { list-style: none; }
 }
 .loc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
 
+/* floating code card on the portrait corner (v2 callback) */
+.portrait-card { position: relative; }
+.code-card {
+  position: absolute; left: -2.4rem; bottom: 2.6rem; z-index: 3;
+  background: #0d1117; border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: 0.7rem 0.85rem 0.8rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem; line-height: 1.55; color: #e6edf3;
+  transform: rotate(-3deg); transition: transform 0.35s ease;
+  max-width: 230px;
+}
+.portrait-card:hover .code-card { transform: rotate(0deg) translateY(-4px); }
+.code-card-bar { display: flex; gap: 6px; margin-bottom: 0.55rem; }
+.code-card-bar span { width: 9px; height: 9px; border-radius: 50%; background: #3d444d; }
+.code-card-bar span:nth-child(1) { background: #ff5f57; }
+.code-card-bar span:nth-child(2) { background: #febc2e; }
+.code-card-bar span:nth-child(3) { background: #28c840; }
+.code-card pre { margin: 0; }
+.code-card code { font-family: inherit; background: none; padding: 0; color: inherit; }
+.tok-kw { color: #ff7b72; }
+.tok-var { color: #79c0ff; }
+.tok-str { color: #a5d6ff; }
+@media (max-width: 720px) {
+  .code-card { left: -1.1rem; bottom: 2.1rem; font-size: 0.64rem; max-width: 196px; }
+}
+
 /* ticker */
 .ticker { border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); background: var(--bg-2); overflow: hidden; padding: 0.95rem 0; }
 .ticker-track { display: flex; align-items: center; gap: 2.6rem; width: max-content; animation: ticker 30s linear infinite; }
