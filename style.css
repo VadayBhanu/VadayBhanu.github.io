@@ -382,7 +382,7 @@ a.mini-card:hover { transform: translateY(-3px); border-color: rgba(255, 138, 42
   .hero-inner { grid-template-columns: 1fr; gap: 2.6rem; padding-bottom: 3.2rem; }
   .hero-visual { order: -1; }
   .portrait-card { width: min(320px, 72vw); padding: 0; border-radius: 24px; }
-  .portrait-card img { aspect-ratio: 3 / 4; border-radius: 23px; }
+  .portrait-card img { border-radius: 23px; }
   .portrait-card figcaption { display: none; }
   .code-card { left: 4%; bottom: -26px; transform: rotate(-3deg); }
   .hero-hello, .hero-name { display: none; }
